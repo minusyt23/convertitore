@@ -1,4 +1,4 @@
-// Crediti: Vitale Carlo Simonee
+// Crediti: Vitale Carlo Simone
 
 var inBase = 10; var outBase = 2;
 
