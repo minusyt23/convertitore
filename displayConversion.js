@@ -197,6 +197,7 @@ var displayConversion = {
 		var labelText = document.createTextNode("Risultato finale:");
 		var label = document.createElement("p");
 		var calcDiv = document.createElement("div");
+		var line = document.createElement("hr");
 		
 		calcDiv.innerText = conversion.string;
 		
@@ -204,6 +205,7 @@ var displayConversion = {
 		label.appendChild(labelText);
 		mainDiv.appendChild(label);
 		mainDiv.appendChild(calcDiv);
+		mainDiv.appendChild(line);
 		document.getElementById("conversion").appendChild(mainDiv);
 		
 		return mainDiv;

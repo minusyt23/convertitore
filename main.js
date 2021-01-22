@@ -1,6 +1,9 @@
 // Crediti: Vitale Carlo Simone
 
+// Conversion variables;
 var inBase = 10; var outBase = 2;
+
+// Calculation variables;
 
 String.prototype.reverse = function() {
 	return this.split("").reverse().join("");
@@ -121,6 +124,10 @@ function APPConvert(number) {
 		console.log(tempConversion);
 	}
 	displayConversion.finalResult(tempConversion);
+}
+
+function APPCalculate(number) {
+	
 }
 
 document.getElementById("inBase").addEventListener("input", () => {

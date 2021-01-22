@@ -1,22 +1,23 @@
 // Crediti: Vitale Carlo Simone
 
-var varNames = ["x", "y", "z", "w", "a", "b"];
-
 var represent = {
-	binary: function (nums, ops, bits) {
+	binary: function (nums, bits) {
 		var proc = [];
-		var representables = {};
 		
 		
 		
-		return {proc: proc, representables: representables};
+		
+		return {proc: proc};
 	},
-	sva: function (nums, ops, bits) {
+	sva: function (nums, bits) {
 		var proc = [];
 		var representables = [];
 		
         
-        return {proc: proc, representables: representables};
+        return {proc: proc};
+	},
+	twc: function (nums, bits) { // Two's complement / Complemento a due
+
 	}
 }
 

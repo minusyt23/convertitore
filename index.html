@@ -53,23 +53,50 @@
 			<div id="conversion" class="page">
 				<h1>Convertitore</h1>
 				<div>
-					<label for="inBase">Base di partenza</label>
+					<label for="inBase">Base di partenza:</label>
 					<input type="range" min="2" max="32" value="10" id="inBase">
 					<label for="inBase" id="inBaseValue">10</label>
 				</div>
-				<div>
-					<label for="outBase">Base d'arrivo</label>
+				<div style="margin-bottom: 8px;">
+					<label for="outBase">Base d'arrivo:</label>
 					<input type="range" min="2" max="32" value="2" id="outBase">
 					<label for="outBase" id="outBaseValue">2</label>
 				</div>
 				<div>
-					<label for="numberInput">Numero</label>
+					<label for="numberInput">Numero:</label>
 					<input type="text" id="numberInput">
 					<button id="numberConvert">Converti</button>
 				</div>
 			</div>
 			<div id="calculator" class="page">
 				<h1>Calcolatore binario</h1>
+				<div>
+					<label for="numberOneInput">Numero 1:</label>
+					<input type="text" id="numberOneInput">
+				</div>
+				<div style
+					<label for="numberTwoInput">Numero 2:</label>
+					<input type="text" id="numberTwoInput">
+				</div>
+				<div>
+					<input type="radio" id="operatorAdd" name="operatorType" value="operatorAdd">
+					<label for="operatorAdd">+</label>
+					<input type="radio" id="operatorSub" name="operatorType" value="operatorAdd">
+					<label for="operatorAdd">-</label>
+					<input type="radio" id="operatorAdd" name="operatorType" value="operatorAdd">
+					<label for="operatorAdd">×</label>
+					<input type="radio" id="operatorAdd" name="operatorType" value="operatorAdd">
+					<label for="operatorAdd">÷</label>
+				</div>
+
+				<div style="margin-top: 8px; padding: 2px; border: 1px black solid">
+					<div style="display: inline-block; position: relative; top: -12px; left: 4px; margin-bottom: -12px; background-color: darkgoldenrod;">
+						Impostazioni Avanzate
+					</div>
+					<div>
+						Poggers
+					</div>
+				</div>
 			</div>
 			<div id="representation" class="page">
 				<h1>Rappresentatore</h1>
@@ -80,6 +107,7 @@
 		<script src="convert.js"></script>
 		<script src="displayConversion.js"></script>
 		<script src="represent.js"></script>
+		<script src="calculate.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>
