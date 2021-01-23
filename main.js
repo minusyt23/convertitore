@@ -5,9 +5,7 @@ var inBase = 10; var outBase = 2;
 
 // Calculation variables;
 
-String.prototype.reverse = function() {
-	return this.split("").reverse().join("");
-}
+String.prototype.reverse = function() { return this.split("").reverse().join(""); }
 
 var calc = {
 	add : function(a, b, base) {

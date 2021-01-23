@@ -15,13 +15,26 @@
 				flex-direction: row;
 				justify-content: center;
 			}
+
+			.flexContainer {
+				display: flex;
+			}
+
+			.buttonRightContainer {
+				overflow: hidden;
+			}
 			
 			.page {
 				padding: 5px;
 				flex: 1;
 			}
+
+			.buttonRight {
+				float: right;
+			}
 			
 			#conversion {
+				padding: 5px;
 				background-color: olivedrab;
 			}
 			#calculator {
@@ -42,6 +55,10 @@
 				border: 1px solid black;
 				padding: 8px;
 			}
+
+			input[type="text"] {
+				flex-grow: 1;
+			}
 		
 		</style>
 		
@@ -50,56 +67,62 @@
 	</head>
 	<body>
 		<div class="pageContainer">
-			<div id="conversion" class="page">
-				<h1>Convertitore</h1>
-				<div>
-					<label for="inBase">Base di partenza:</label>
-					<input type="range" min="2" max="32" value="10" id="inBase">
-					<label for="inBase" id="inBaseValue">10</label>
-				</div>
-				<div style="margin-bottom: 8px;">
-					<label for="outBase">Base d'arrivo:</label>
-					<input type="range" min="2" max="32" value="2" id="outBase">
-					<label for="outBase" id="outBaseValue">2</label>
-				</div>
-				<div>
-					<label for="numberInput">Numero:</label>
-					<input type="text" id="numberInput">
-					<button id="numberConvert">Converti</button>
-				</div>
-			</div>
 			<div id="calculator" class="page">
 				<h1>Calcolatore binario</h1>
-				<div>
+				<div class="flexContainer">
 					<label for="numberOneInput">Numero 1:</label>
 					<input type="text" id="numberOneInput">
 				</div>
-				<div style
+				<div class="flexContainer">
 					<label for="numberTwoInput">Numero 2:</label>
 					<input type="text" id="numberTwoInput">
 				</div>
-				<div>
+				<div class="buttonRightContainer">
 					<input type="radio" id="operatorAdd" name="operatorType" value="operatorAdd">
 					<label for="operatorAdd">+</label>
-					<input type="radio" id="operatorSub" name="operatorType" value="operatorAdd">
-					<label for="operatorAdd">-</label>
-					<input type="radio" id="operatorAdd" name="operatorType" value="operatorAdd">
-					<label for="operatorAdd">×</label>
-					<input type="radio" id="operatorAdd" name="operatorType" value="operatorAdd">
-					<label for="operatorAdd">÷</label>
+					<input type="radio" id="operatorSub" name="operatorType">
+					<label for="operatorSub">-</label>
+					<input type="radio" id="operatorMul" name="operatorType">
+					<label for="operatorMul">×</label>
+					<input type="radio" id="operatorDiv" name="operatorType">
+					<label for="operatorDiv">÷</label>
+					<input type="radio" id="operatorMod" name="operatorType">
+					<label for="operatorMod">%</label>
+					<button class="buttonRight" id="operationStart">=</button>
 				</div>
 
 				<div style="margin-top: 8px; padding: 2px; border: 1px black solid">
 					<div style="display: inline-block; position: relative; top: -12px; left: 4px; margin-bottom: -12px; background-color: darkgoldenrod;">
-						Impostazioni Avanzate
+						Risultato
 					</div>
-					<div>
-						Poggers
+					<div id="operationResult">
+						
 					</div>
 				</div>
 			</div>
 			<div id="representation" class="page">
 				<h1>Rappresentatore</h1>
+			</div>
+		</div>
+
+		<div id="conversion">
+			<h1>Convertitore</h1>
+			<div>
+				<label for="inBase">Base di partenza:</label>
+				<input type="range" min="2" max="32" value="10" id="inBase">
+				<label for="inBase" id="inBaseValue">10</label>
+			</div>
+			<div style="margin-bottom: 8px;">
+				<label for="outBase">Base d'arrivo:</label>
+				<input type="range" min="2" max="32" value="2" id="outBase">
+				<label for="outBase" id="outBaseValue">2</label>
+			</div>
+			<div class="flexContainer">
+				<label for="numberInput">Numero:</label>
+				<input type="text" id="numberInput">
+			</div>
+			<div class="buttonRightContainer">
+				<button class="buttonRight" id="numberConvert">Converti</button>
 			</div>
 		</div>
 		
@@ -109,5 +132,9 @@
 		<script src="represent.js"></script>
 		<script src="calculate.js"></script>
 		<script src="main.js"></script>
+		<script>
+
+		</script>
 	</body>
+	<!-- Crediti: Vitale Carlo Simone !-->
 </html>
