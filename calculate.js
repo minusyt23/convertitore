@@ -86,7 +86,7 @@ var calculate = {
             
             if(yesorno) { }
 
-            var result = 
+            var result = 0;
         }
 
         multiplier = multiplier.padStart(bits, "0");
@@ -96,7 +96,7 @@ var calculate = {
             var num1 = multiplier[i] | 0;
             var num2 = multiplicand[i] | 0;
 
-            var result = 
+            var result = 0;
         }
     }
      

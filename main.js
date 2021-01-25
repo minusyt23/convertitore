@@ -5,6 +5,8 @@ var inBase = 10; var outBase = 2;
 
 // Calculation variables;
 
+var operation = "";
+
 String.prototype.reverse = function() { return this.split("").reverse().join(""); }
 
 var calc = {
@@ -124,9 +126,11 @@ function APPConvert(number) {
 	displayConversion.finalResult(tempConversion);
 }
 
-function APPCalculate(number) {
-	
+function APPCalculate(number1, number2) {
+	console.log(calculate[operation](number1, number2, 8));
 }
+
+// Conversion callbacks
 
 document.getElementById("inBase").addEventListener("input", () => {
 	inBase = parseInt(document.getElementById("inBase").value);
@@ -140,6 +144,43 @@ document.getElementById("outBase").addEventListener("input", () => {
 
 document.getElementById("numberConvert").addEventListener("click", () => {
 	APPConvert(document.getElementById("numberInput").value);
+});
+
+// Calculation callbacks
+
+document.getElementById("operatorAdd").addEventListener("input", () => {
+	operation = "add";
+});
+
+document.getElementById("operatorSub").addEventListener("input", () => {
+	operation = "sub";
+});
+
+document.getElementById("operatorMul").addEventListener("input", () => {
+	operation = "mul";
+});
+
+document.getElementById("operatorDiv").addEventListener("input", () => {
+	operation = "div";
+});
+
+document.getElementById("operatorMod").addEventListener("input", () => {
+	operation = "mod";
+});
+
+document.getElementById("operationStart").addEventListener("click", () => {
+	APPCalculate(
+		document.getElementById("numberOneInputCalculate").value, 
+		document.getElementById("numberTwoInputCalculate").value
+	);
+});
+
+// Complement callbacks
+
+document.getElementById("complementStart").addEventListener("click", () => {
+	document.getElementById("twcOutput").innerText = complement.twos(
+		document.getElementById("twcInput").value
+	);
 });
 
 // Crediti: Vitale Carlo Simone
